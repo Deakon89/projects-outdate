@@ -1,0 +1,58 @@
+html{
+    font-size: 18px;
+    padding: 15px;
+    line-height: 30px;
+    margin: 15px;
+}
+
+body{
+    width: 100%;
+  font-family: Montserrat, sans-serif;
+  background: url(../img/pixel.jpg) no-repeat center fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+h1{
+    color: antiquewhite;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo{
+    margin-left: 430px; 
+    height: 300px;
+}
+
+nav{
+    margin-left: 160px;
+    margin-top: 10px;
+}
+li{
+    margin: 100px;
+}
+
+nav ul li {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: antiquewhite;
+}
+a{
+    color: antiquewhite;   
+}
+
+p{
+    color: antiquewhite;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+em{
+font: bold;
+font-size: 30px;
+}
+footer{
+    color: antiquewhite;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);  
+}
