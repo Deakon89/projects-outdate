@@ -1,0 +1,398 @@
+//import
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+//colori
+$back-color:rgb(237, 235, 236);
+$font-color:rgb(67, 151, 125);
+$border-color:rgb(1, 195, 204);
+
+//font
+$font-text:Montserrat, sans-serif;
+$font-title:Montserrat Subrayada, sans-serif;
+
+//padding & margin
+$padd:20px;
+$marg:10px;
+
+//Style
+html{
+    font-family: $font-text;
+    color: $font-color;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    ::-webkit-scrollbar {
+        width: 5px;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: $back-color;
+        border-radius: 10px; 
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        border-radius: 10px; 
+    }
+
+    body{
+        background-color: $back-color;
+        h1, h2, h3{
+            font-family: $font-title;
+            color: $font-color;
+        }
+    }
+}
+
+a{
+    text-decoration: none;
+    color: $font-color;
+}
+
+header{
+    background-color: $font-color;
+    color: $back-color;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: $marg;
+    #logo{
+        float: left;
+        width: 30%;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    ul li{
+        list-style: none;
+        margin: 0; 
+      
+    }  
+    ul li a{
+        display: block;
+        color: $back-color;
+        list-style: none;
+        margin: 0;
+        padding: 5px;
+       
+    }
+    .menu{
+        clear: both;
+        list-style: none;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .5s ease-out;      
+    }
+    .menu a:hover{
+        background-color: $back-color;
+        color: $font-color;
+        transition: all .5s ease-out;  
+    }
+    label span img{
+    
+    width: 10%;
+    float: right;
+    cursor: pointer;
+   }
+
+    #drop-check{
+        display: none;
+    }
+
+    #drop-check:checked ~ .menu{
+        max-height: 240px;
+    }
+    
+}
+
+img{
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.onu{
+    width: 20%;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: minmax(100px auto); 
+    column-gap: $marg;
+    :hover{
+        background-color: $font-color;
+        color: $back-color;
+        transition: all .2s ease-out;
+        box-sizing: border-box;
+         h1{
+            color: $back-color;
+        } 
+        #action{
+            background-color: $border-color;
+            color: $back-color;
+        }
+        a{
+            background-color: $border-color;
+        }
+        h3{
+            color: $back-color; 
+        }
+    }     
+}
+
+.innmain{
+    grid-template-columns: 1fr; 
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    h1{
+        grid-column: 1;
+        grid-row: 1;
+        margin: $marg;
+        padding: $padd;
+        align-self: auto;
+        
+    }
+
+    p{
+        grid-column: 1;
+        grid-row: 2;
+        margin: $marg;
+        padding: $padd;
+        align-self: auto;
+        font-size: 1rem;
+    }
+    #action{
+        grid-column: 1;
+        grid-row: 3;
+        margin: 30px;
+        padding: $padd;
+        align-self: auto;
+        background-color: $font-color;
+        font-family: $font-title;
+        border-radius: 10px;
+        font-size: 1rem;
+        a{
+            text-decoration: none;
+            color: $back-color;
+        }
+    }
+
+}
+
+.sidebar{
+    grid-column: 2;
+    grid-row: 1;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    padding: $padd;
+    align-self: auto;
+    font-size: 1rem;  
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: minmax(100px auto);
+    margin-top: $marg; 
+    column-gap: $marg;
+    :hover{
+        background-color: $font-color;
+        color: $back-color;
+        transition: all .2s ease-out;
+        box-sizing: border-box;
+        h2{
+            color: $back-color;
+        }
+    }
+    #gloria{
+        grid-column: 2;
+        grid-row: 1;
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        align-self: auto;
+        width: 100%;
+        height: 100%;
+    
+    }      
+}
+
+.innhero{
+    grid-template-columns: 1fr; 
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    margin-top: $marg;
+    h2{
+        grid-column: 1;
+        grid-row: 1;
+        margin: $marg;
+        padding: $padd;
+        align-self: auto;
+         
+    }
+
+    p{
+        grid-column: 1;
+        grid-row: 2;
+        margin: $marg;
+        padding: $padd;
+        align-self: auto;
+        font-size: 1rem;
+    }
+}
+
+form{
+    margin-top:$marg;
+    font-size: 1rem;
+    
+    fieldset{
+        border-color: $border-color;
+        border-radius: 10px;
+        input{
+            border-radius: 10px;
+            padding: 5px;
+            margin: $marg;
+            color: $border-color;
+        }
+        textarea{
+            border-radius: 10px;
+            padding: 5px;
+            margin: $marg;
+            width: 50%;
+            color: $border-color;
+        }
+       
+    }
+}
+
+footer{
+    display: block;
+    text-align: center;
+    background-color: $font-color;
+    color: $back-color;
+    border-radius: 10px;
+    padding:$padd;
+    margin-top: $marg;
+    font-size: 1rem;
+    img:hover{
+        background-size: cover;
+        background-color: $back-color;
+        border-radius: 10px;
+    }
+    span{
+        padding: 5px;
+        font-size: 0.5rem;
+    }
+
+}
+
+@media (min-width:950px) {
+    #action2{
+        display: none;
+    }
+
+}
+
+@media (min-width:1040px) {
+    header{
+        height:230px;
+        .menu{
+            overflow: visible;
+            
+            li{
+                position: relative;
+                float: right;
+                bottom: 100px;
+                a{
+                 padding:20px 30px;
+                }
+            }
+        }
+        label span img{
+            display: none;
+        }
+    }
+}
+@media (max-width:950px) {
+    .main{
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-auto-rows: minmax(100px auto); 
+        column-gap: $marg;
+        h1{
+            grid-column: 1;
+            grid-row: 1;
+            margin: $marg;
+            padding: $padd;
+            align-self: auto;
+            
+        }
+        p{
+            grid-column: 1;
+            grid-row: 2;
+            margin: $marg;
+            padding: $padd;
+            align-self: auto;
+            font-size: 1rem;
+        }
+        #action{
+            grid-column: 1;
+            grid-row: 3;
+            margin: 30px;
+            padding: $padd;
+            align-self: auto;
+            background-color: $font-color;
+            font-family: $font-title;
+            border-radius: 10px;
+            font-size: 1rem;
+            a{
+                text-decoration: none;
+                color: $back-color;
+            }
+        }
+        .sidebar{
+            grid-column: 1;
+            grid-row: 1;
+            border: 1px solid $border-color;
+            border-radius: 10px;
+            padding: $padd;
+            align-self: auto;
+            font-size: 1rem;  
+        }
+    }
+    .hero{
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-auto-rows: minmax(100px auto);
+        margin-top: $marg; 
+        column-gap: $marg;
+    }
+    #gloria{
+        display: none;
+    }
+    #action2{
+        grid-column: 1;
+        grid-row: 3;
+        margin: 30px;
+        padding: $padd;
+        align-self: auto;
+        background-color: $font-color;
+        font-family: $font-title;
+        border-radius: 10px;
+        font-size: 1rem;
+        a{
+            text-decoration: none;
+            color: $back-color;
+        }
+    }
+}
+
+
+
+
+
+ 
+  
